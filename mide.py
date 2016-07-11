@@ -3,8 +3,9 @@
 import usbtmc as u
 try:
 	dvm=u.Instrument("USB::0x0957::0x0607::INSTR")
+	##gen=u.Instrument(0x1ab1,0x0640)
 except: # x cualquier  excepcion
-	print "No se pudo encontrar el multímetro"
+	print "No se pudo encontrar el multÃ­metro"
 	raise
 else:
 	dvm_id=dvm.ask("*IDN?")
